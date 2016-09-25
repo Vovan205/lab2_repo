@@ -25,12 +25,12 @@ emps = [ivan, darja]
 
 
 def filter_childrens(emps, age_limit):
-    filtered = []
+    filtered = [] #пустой массив для отфильтрованных сотрудников
     for element in emps:
         children = element.get('children')
         for child in children:
-            if child['age'] >= age_limit and element.get('name') not in filtered:
-                filtered.append(element.get('name'))
+            if child['age'] >= age_limit and element.get('name') not in filtered: #если возраст больше или равен предельному и имя сотрудника ещё не попало в массив
+                filtered.append(element.get('name')) #добавляем имя сотрудника в массив
 
     return filtered
 
